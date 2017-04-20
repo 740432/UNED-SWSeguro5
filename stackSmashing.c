@@ -1,25 +1,14 @@
 #include <stdio.h>
+#include <string.h>
+int main() {
+    char message[5];
+    int count, i;
 
-void secretFunction()
-{
-    printf("Enhorabuena!\n");
-    printf("Ha entrado en la función secreta!\n");
+    strcpy(message, "Hello, world!");
+
+    printf("Repeat how many times? ");
+    scanf("%d", &count);
+
+    for(i=0; i < count; i++)
+        printf("%3d - %s\n", i, message);
 }
-
-void echo()
-{
-    char buffer[20];
-
-    printf("Escriba un texto:\n");
-    scanf("%s", buffer);
-    printf("Has escrito: %s\n", buffer);    
-}
-
-int main()
-{
-    echo();
-
-    return 0;
-}
-
-
